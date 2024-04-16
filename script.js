@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+    
     // Function to mark todo as done
     window.markAsDone = async (id) => {
         try {
