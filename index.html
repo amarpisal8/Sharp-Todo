@@ -6,50 +6,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Todo List</title>
   <style>
     body {
       margin: 20px;
     }
-    .container{
-        padding: 40px;
-        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;    }
-    .header {
-      text-align: center;
-      margin-bottom: 20px;
+
+    .form-control {
+      margin-bottom: 10px;
     }
-    .form-inline input {
-      margin-right: 10px;
-    }
-    .table th, .table td {
-      text-align: center;
-      vertical-align: middle;
-    }
-    .action-btns button {
+
+    .btn {
       margin-right: 5px;
+    }
+
+    .table td,
+    .table th {
+      vertical-align: middle;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <!-- Input Section -->
-    <h1 class="header">Todo List</h1>
-    <form class="form-inline" onsubmit="handleFormSubmit(event)">
-      <div class="form-group">
-        <label for="todo">Name:</label>
-        <input type="text" class="form-control" name="username" id="todo" required>
+    <!-- for input -->
+    <h1 class="text-center">Todo List</h1>
+    <form onsubmit="handleFormSubmit(event)">
+      <div class="mb-3">
+        <label for="todo" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="todo" name="username">
       </div>
-      <div class="form-group">
-        <label for="Description">Description:</label>
-        <input type="text" class="form-control" name="Description" id="Description" required>
+      <div class="mb-3">
+        <label for="Description" class="form-label">Description:</label>
+        <input type="text" class="form-control" id="Description" name="Description">
       </div>
-      <button type="submit" class="btn btn-primary">+</button>
+      <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add</button>
     </form>
 
-    <!-- Output Preview -->
-    <h2 class="mt-4">To-do's</h2>
-    <table class="table table-bordered">
+    <!-- for output -->
+    <h2 class="mt-5">To-do's</h2>
+    <table class="table">
       <thead>
         <tr>
           <th>Name</th>
@@ -60,8 +57,8 @@
       <tbody id="listOfItems">
       </tbody>
     </table>
-    <h2>Completed To-do's</h2>
-    <table class="table table-bordered">
+    <h2 class="mt-5">Completed To-do's</h2>
+    <table class="table">
       <thead>
         <tr>
           <th>Todo Name</th>
@@ -72,7 +69,7 @@
       </tbody>
     </table>
   </div>
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
 </body>
