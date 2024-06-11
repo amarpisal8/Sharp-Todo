@@ -1,4 +1,4 @@
-const apiUrl = "https://crudcrud.com/api/a6970ea3638c447a86049b0e242ee75a";
+const apiUrl = "https://crudcrud.com/api/c38882550bb44467a1e38d9e8d436863";
 
 window.addEventListener("DOMContentLoaded", () => {
     axios.get(`${apiUrl}/Data`)
