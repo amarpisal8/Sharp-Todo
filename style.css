@@ -11,6 +11,8 @@ body{
    }
    .inputContainer{
     display: flex;
+    align-items: center;
+    padding-left:5%;
    }
    td{
     color: white;
@@ -23,7 +25,7 @@ body{
     outline: none;
     border: none;
     border-radius: 0;
-    width: 700px;
+    width: 300%;
     color: rgb(0, 217, 255);
    }
    #Description{
@@ -31,7 +33,7 @@ body{
     outline: none;
     border: none;
     border-radius: 0;
-    width: 700px;
+    width: 300%;
     color: aqua;
    }
    .addBtnStyle{
@@ -42,20 +44,21 @@ body{
     font-weight: 900;
     height: 40px;
     width: 75px;
+    margin-left: 120%;
    }
    #todo:hover{
     background-color: rgba(245, 222, 179, 0.253);
     outline: none;
     border: none;
     border-radius: 0;
-    width: 700px;
+    width: 300%;
    }
    #Description:hover{
     background-color: rgba(245, 222, 179, 0.301);
     outline: none;
     border: none;
     border-radius: 0;
-    width: 700px;
+    width: 300%;
    }
    .addBtnStyle:hover{
     background-color: rgba(255, 255, 255, 0.288);
@@ -65,4 +68,5 @@ body{
     font-weight: 900;
     height: 40px;
     width: 75px;
+    margin-left: 120%;
    }
