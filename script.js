@@ -78,6 +78,7 @@ function AddToDone(user) {
     row.innerHTML = `
         <td>${user.todo}</td>
         <td>${user.description}</td>
+        <td>Completed</td>
     `;
 
     doneEle.appendChild(row);

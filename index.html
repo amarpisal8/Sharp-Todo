@@ -19,11 +19,11 @@
     <div class="inputContainer">
       <form onsubmit="handleFormSubmit(event)">
       <div class="mb-3">
-        <label for="todo" class="form-label"></label>
+        <label for="todo" class="form-label">Todo Name</label>
         <input type="text" class="form-control" id="todo" name="username">
       </div>
       <div class="mb-3">
-        <label for="Description" class="form-label"></label>
+        <label for="Description" class="form-label">Description</label>
         <input type="text" class="form-control" id="Description" name="Description">
       </div>
       <button type="submit" class="addBtnStyle"><i class="fas fa-plus"></i></button>
@@ -51,6 +51,7 @@
           <tr>
             <th>Todo Name</th>
             <th>Todo Description</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody id="DoneItems">
