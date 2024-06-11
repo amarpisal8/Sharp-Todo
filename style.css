@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+    color: white;
+   }
+   .container{
+    border: 2px solid wheat;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: rgba(3, 15, 41, 0.445);
+    box-shadow: rgba(255, 255, 255, 0.12) 0px 1px 3px, rgba(255, 255, 255, 0.24) 0px 1px 2px;
+   }
+   .inputContainer{
+    display: flex;
+   }
+   td{
+    color: white;
+   }
+   th{
+    color: yellow;
+   }
+   #todo{
+    background-color: rgba(245, 222, 179, 0.137);
+    outline: none;
+    border: none;
+    border-radius: 0;
+    width: 700px;
+    color: rgb(0, 217, 255);
+   }
+   #Description{
+    background-color: rgba(245, 222, 179, 0.137);
+    outline: none;
+    border: none;
+    border-radius: 0;
+    width: 700px;
+    color: aqua;
+   }
+   .addBtnStyle{
+    background-color: rgba(255, 255, 255, 0.137);
+    outline: none;
+    border: none;
+    color: green;
+    font-weight: 900;
+    height: 40px;
+    width: 75px;
+   }
+   #todo:hover{
+    background-color: rgba(245, 222, 179, 0.253);
+    outline: none;
+    border: none;
+    border-radius: 0;
+    width: 700px;
+   }
+   #Description:hover{
+    background-color: rgba(245, 222, 179, 0.301);
+    outline: none;
+    border: none;
+    border-radius: 0;
+    width: 700px;
+   }
+   .addBtnStyle:hover{
+    background-color: rgba(255, 255, 255, 0.288);
+    outline: none;
+    border: none;
+    color: green;
+    font-weight: 900;
+    height: 40px;
+    width: 75px;
+   }
