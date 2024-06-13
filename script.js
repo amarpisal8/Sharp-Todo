@@ -1,4 +1,4 @@
-const apiUrl = "https://crudcrud.com/api/c38882550bb44467a1e38d9e8d436863";
+const apiUrl = "https://crudcrud.com/api/465ba08919e643d5850c0d59b4c697c7";
 
 window.addEventListener("DOMContentLoaded", () => {
     axios.get(`${apiUrl}/Data`)
@@ -44,7 +44,7 @@ function ShowUserOnScreen(user) {
         </td>
     `;
 
-    row.dataset.id = user._id;
+    row.id = user._id;
     ParentEle.appendChild(row);
 }
 
@@ -78,7 +78,7 @@ function AddToDone(user) {
     row.innerHTML = `
         <td>${user.todo}</td>
         <td>${user.description}</td>
-        <td>Completed</td>
+        <td> <i>Completed</i></td>
     `;
 
     doneEle.appendChild(row);
