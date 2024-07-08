@@ -1,4 +1,5 @@
-const apiUrl = "https://crudcrud.com/api/465ba08919e643d5850c0d59b4c697c7";
+const apiUrl = "https://crudcrud.com/api/64d2778dc2e5458ba3b24eb3d272b5a7";
+const clickSound = new Audio('click-sound.mp3');
 
 window.addEventListener("DOMContentLoaded", () => {
     axios.get(`${apiUrl}/Data`)
@@ -15,6 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function handleFormSubmit(event) {
     event.preventDefault();
+    clickSound.play();
     const Todo = event.target.username.value;
     const description = event.target.Description.value;
     const myObj = { Todo, description };
@@ -30,6 +32,7 @@ function handleFormSubmit(event) {
 function ShowUserOnScreen(user) {
     const ParentEle = document.getElementById("listOfItems");
     const row = document.createElement("tr");
+    row.classList.add('animate__animated', 'animate__fadeInUp');
 
     row.innerHTML = `
         <td>${user.Todo}</td>
@@ -55,9 +58,10 @@ function deleteUser(userId) {
 }
 
 function removeFromScreen(userId) {
-    const row = document.querySelector(`[data-id='${userId}']`);
+    const row = document.getElementById(userId);
     if (row) {
-        row.remove();
+        row.classList.add('animate__animated', 'animate__fadeOut');
+        row.addEventListener('animationend', () => row.remove());
     }
 }
 
@@ -74,11 +78,12 @@ function markAsDone(userId, todo, description) {
 function AddToDone(user) {
     const doneEle = document.getElementById("DoneItems");
     const row = document.createElement("tr");
+    row.classList.add('animate__animated', 'animate__fadeInUp');
 
     row.innerHTML = `
         <td>${user.todo}</td>
         <td>${user.description}</td>
-        <td> <i>Completed</i></td>
+        <td> <i><i class="fa-solid fa-circle-check fa-lg" style="color: #1b6600;"></i></i></td>
     `;
 
     doneEle.appendChild(row);

@@ -7,59 +7,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <title>Todo List</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
-    <!-- for input -->
-      <h1 class="text-center">Todo List</h1>
-    
-    <div class="inputContainer">
-      <form onsubmit="handleFormSubmit(event)">
-      <div class="mb-3">
-        <label for="todo" class="form-label">Todo Name</label>
-        <input type="text" class="form-control" id="todo" name="username">
+    <div class="row">
+      <!-- for input -->
+      <div class="col-md-4 inputContainer animate__animated animate__fadeInLeft">
+        <h1 class="text-center">Todo List</h1>
+        <form onsubmit="handleFormSubmit(event)">
+          <div class="mb-3">
+            <label for="todo" class="form-label">Todo Name</label>
+            <input type="text" class="form-control" id="todo" name="username">
+          </div>
+          <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="Description" name="Description">
+          </div>
+          <button type="submit" class="addBtnStyle"><i class="fas fa-plus"></i> Add</button>
+        </form>
       </div>
-      <div class="mb-3">
-        <label for="Description" class="form-label">Description</label>
-        <input type="text" class="form-control" id="Description" name="Description">
+
+      <!-- for output -->
+      <div class="col-md-8 outputContainer animate__animated animate__fadeInRight">
+        <h2 class="mt-5">To-do's</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="listOfItems">
+          </tbody>
+        </table>
+        <h2 class="mt-5">Completed To-do's</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Todo Name</th>
+              <th>Todo Description</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="DoneItems">
+          </tbody>
+        </table>
       </div>
-      <button type="submit" class="addBtnStyle"><i class="fas fa-plus"></i></button>
-    </form>
     </div>
-   
-
-    <!-- for output -->
-    <div class="outputContainer">
-      <h2 class="mt-5">To-do's</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody id="listOfItems">
-        </tbody>
-      </table>
-      <h2 class="mt-5">Completed To-do's</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Todo Name</th>
-            <th>Todo Description</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="DoneItems">
-        </tbody>
-      </table>
-    </div>
-
-
   </div>
   <script src="./script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

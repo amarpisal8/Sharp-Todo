@@ -1,72 +1,94 @@
-body{
-    background-color: black;
-    color: white;
-   }
-   .container{
-    border: 2px solid wheat;
-    padding: 10px;
-    margin-top: 40px;
-    background-color: rgba(3, 15, 41, 0.445);
-    box-shadow: rgba(255, 255, 255, 0.12) 0px 1px 3px, rgba(255, 255, 255, 0.24) 0px 1px 2px;
-   }
-   .inputContainer{
-    display: flex;
-    align-items: center;
-    padding-left:5%;
-   }
-   td{
-    color: white;
-   }
-   th{
-    color: yellow;
-   }
-   #todo{
-    background-color: rgba(245, 222, 179, 0.137);
-    outline: none;
-    border: none;
-    border-radius: 0;
-    width: 300%;
-    color: rgb(0, 217, 255);
-   }
-   #Description{
-    background-color: rgba(245, 222, 179, 0.137);
-    outline: none;
-    border: none;
-    border-radius: 0;
-    width: 300%;
-    color: aqua;
-   }
-   .addBtnStyle{
-    background-color: rgba(255, 255, 255, 0.137);
-    outline: none;
-    border: none;
-    color: green;
-    font-weight: 900;
-    height: 40px;
-    width: 75px;
-    margin-left: 120%;
-   }
-   #todo:hover{
-    background-color: rgba(245, 222, 179, 0.253);
-    outline: none;
-    border: none;
-    border-radius: 0;
-    width: 300%;
-   }
-   #Description:hover{
-    background-color: rgba(245, 222, 179, 0.301);
-    outline: none;
-    border: none;
-    border-radius: 0;
-    width: 300%;
-   }
-   .addBtnStyle:hover{
-    background-color: rgba(255, 255, 255, 0.288);
-    outline: none;
-    border: none;
-    color: green;
-    font-weight: 900;
-    height: 40px;
-    width: 75px;
-    margin-left: 120%;
-   }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #f12711, #f5af19);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+}
+
+.inputContainer {
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputContainer label {
+  font-family: 'Lato', sans-serif;
+}
+
+.addBtnStyle {
+  padding: 10px 15px;
+  background-color: #006097;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s;
+}
+
+.addBtnStyle i {
+  margin-right: 5px;
+}
+
+.addBtnStyle:hover {
+  transform: scale(1.1);
+}
+
+.table th, .table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #a30031;
+  color: white;
+}
+
+.table td button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.table td .btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.table td .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
