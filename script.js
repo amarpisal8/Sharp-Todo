@@ -1,6 +1,7 @@
-const apiUrl = "https://crudcrud.com/api/3037f04984994c499be3dd714d008a64";
-const clickSound = new Audio('click-sound.mp3');
-
+const apiUrl = "https://crudcrud.com/api/41d3eae391b74d718a6f3013697dc025";
+const clickSound = new Audio('./sound/action.mp3');
+const completedSound = new Audio('./sound/completed.mp3');
+const deletedSound = new Audio('./sound/Deleted.mp3')
 window.addEventListener("DOMContentLoaded", () => {
     axios.get(`${apiUrl}/Data`)
         .then((res) => {
@@ -71,6 +72,7 @@ function markAsDone(userId, todo, description) {
         .then(() => {
             deleteUser(userId);
             AddToDone(myObj);
+            completedSound.play();
         })
         .catch((err) => console.log(err));
 }
@@ -83,7 +85,7 @@ function AddToDone(user) {
     row.innerHTML = `
         <td>${user.todo}</td>
         <td>${user.description}</td>
-        <td> <i><i class="fa-solid fa-circle-check fa-lg" style="color: #1b6600;"></i></i></td>
+        <td> <i><i id="checkTick" class="fa-solid fa-circle-check fa-lg" style="color: #1b6600;"></i></i></td>
     `;
 
     doneEle.appendChild(row);
