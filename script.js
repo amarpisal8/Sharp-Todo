@@ -1,13 +1,18 @@
-const apiUrl = "https://crudcrud.com/api/41d3eae391b74d718a6f3013697dc025";
+const apiUrl = "https://crudcrud.com/api/723236fc4e314c86848e38dd24fd942a";
+
+
 const clickSound = new Audio('./sound/action.mp3');
 const completedSound = new Audio('./sound/completed.mp3');
-const deletedSound = new Audio('./sound/Deleted.mp3')
+// const deletedSound = new Audio('./sound/Deleted.mp3');
+
+
 window.addEventListener("DOMContentLoaded", () => {
     axios.get(`${apiUrl}/Data`)
         .then((res) => {
             res.data.forEach(user => ShowUserOnScreen(user));
         })
         .catch((err) => console.log(err));
+
     axios.get(`${apiUrl}/Done`)
         .then((res) => {
             res.data.forEach(user => AddToDone(user));
