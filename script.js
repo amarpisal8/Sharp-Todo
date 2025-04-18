@@ -1,4 +1,4 @@
-const apiUrl = "https://crudcrud.com/api/83238bf572864e519ea39d443c6a3a13";
+const apiUrl = "https://crudcrud.com/api/ce96b186cff8436a8ed165f9da391a0a";
 
 
 const clickSound = new Audio('./sound/action.mp3');
